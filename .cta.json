@@ -1,0 +1,25 @@
+{
+  "projectName": "erb-portfolio",
+  "mode": "file-router",
+  "typescript": true,
+  "packageManager": "npm",
+  "includeExamples": false,
+  "tailwind": true,
+  "addOnOptions": {},
+  "envVarValues": {},
+  "git": true,
+  "install": true,
+  "routerOnly": false,
+  "version": 1,
+  "framework": "react",
+  "chosenAddOns": [
+    "biome",
+    "nitro",
+    "compiler",
+    "form",
+    "paraglide",
+    "shadcn",
+    "t3env",
+    "tanstack-query"
+  ]
+}
