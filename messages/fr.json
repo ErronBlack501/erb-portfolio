@@ -67,7 +67,7 @@
 	"ctf_competitions": "Compétitions CTF",
 	"open_source_projects": "Projets open source",
 	"contact_title": "Contact",
-	"contact_subtitle": "Vous avez un projet en tête ou souhaitez collaborer ? N’hésitez pas à nous contacter !",
+	"contact_subtitle": "Vous avez un projet en tête ou souhaitez collaborer ? N'hésitez pas à me contacter !",
 	"lets_connect": "Connectons-nous",
 	"send_message": "Envoyer un message",
 	"name": "Nom",
@@ -77,7 +77,7 @@
 	"message_sent_success": "Message envoyé avec succès ! Je vous répondrai bientôt.",
 	"response_time": "Temps de réponse",
 	"response_time_desc": "Je réponds généralement aux messages sous 24 à 48 heures. Pour les urgences, n'hésitez pas à me contacter via LinkedIn ou Discord.",
-	"footer": "© 2025 John Doe. Développé avec TanStack Start, React et TypeScript.",
+	"footer": "© 2025 TOBE Heritiana Luca. Développé avec TanStack Start, React et TypeScript.",
 	"language_label": "Langue",
 	"current_locale": "Paramètres régionaux actuels : {locale}"
 }

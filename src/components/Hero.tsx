@@ -42,7 +42,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="display-title text-5xl md:text-7xl font-bold text-[var(--sea-ink)] mb-6 leading-tight"
           >
-            John Doe
+            TOBE Heritiana Luca
           </motion.h1>
 
           <motion.p

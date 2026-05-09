@@ -77,7 +77,7 @@
   "message_sent_success": "Message sent successfully! I'll get back to you soon.",
   "response_time": "Response Time",
   "response_time_desc": "I typically respond to messages within 24-48 hours. For urgent matters, feel free to reach out via LinkedIn or Discord.",
-  "footer": "© 2025 John Doe. Built with TanStack Start, React, and TypeScript.",
+  "footer": "© 2025 TOBE Heritiana Luca. Built with TanStack Start, React, and TypeScript.",
   "language_label": "Language",
   "current_locale": "Current locale: {locale}"
 }

@@ -42,11 +42,12 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Portfolio - Fullstack Developer',
+        title: 'TOBE Heritiana Luca - Fullstack Developer',
       },
       {
         name: 'description',
-        content: 'Professional portfolio of a Fullstack TypeScript Developer specializing in backend engineering, system design, and DevOps.',
+        content:
+          'Portfolio professionnel de TOBE Heritiana Luca, developpeur Fullstack TypeScript specialise en backend engineering, system design et DevOps.',
       },
     ],
     links: [
