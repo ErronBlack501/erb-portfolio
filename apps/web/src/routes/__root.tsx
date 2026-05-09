@@ -5,7 +5,7 @@ import {
 } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Github } from 'lucide-react'
 import { m } from '#/paraglide/messages'
 
 import TanStackQueryDevtools from '../integrations/tanstack-query/devtools'
@@ -18,6 +18,8 @@ import type { QueryClient } from '@tanstack/react-query'
 import { useState } from 'react'
 
 import { LanguageSwitcher } from '#/components/LanguageSwitcher'
+import { ThemeProvider } from '#/components/theme-provider'
+import { ThemeToggle } from '#/components/ThemeToggle'
 
 interface MyRouterContext {
   queryClient: QueryClient
@@ -100,6 +102,24 @@ function Navigation() {
           <div className="ml-4">
             <LanguageSwitcher />
           </div>
+
+          {/* Theme Toggle */}
+          <div className="ml-2">
+            <ThemeToggle />
+          </div>
+
+          {/* GitHub */}
+          <div className="ml-2">
+            <a
+              href="https://github.com/yourusername/erb-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-9 w-9 flex items-center justify-center rounded-md border border-gray-200 bg-transparent p-2 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800"
+              aria-label="GitHub"
+            >
+              <Github className="h-5 w-5 text-gray-600 dark:text-gray-400" />
+            </a>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -127,9 +147,19 @@ function Navigation() {
               </a>
             ))}
             
-            {/* Mobile Language Switcher */}
-            <div className="pt-2 border-t border-[var(--line)]">
+            {/* Mobile Language Switcher & Theme Toggle */}
+            <div className="pt-2 border-t border-[var(--line)] flex items-center gap-4">
               <LanguageSwitcher />
+              <ThemeToggle />
+              <a
+                href="https://github.com/yourusername/erb-portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-9 w-9 flex items-center justify-center rounded-md border border-gray-200 bg-transparent p-2 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800"
+                aria-label="GitHub"
+              >
+                <Github className="h-5 w-5 text-gray-600 dark:text-gray-400" />
+              </a>
             </div>
           </div>
         </div>
@@ -140,25 +170,32 @@ function Navigation() {
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={getLocale()}>
+    <html lang={getLocale()} suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
       <body>
-        <Navigation />
-        <main className="pt-16">{children}</main>
-        <TanStackDevtools
-          config={{
-            position: 'bottom-right',
-          }}
-          plugins={[
-            {
-              name: 'Tanstack Router',
-              render: <TanStackRouterDevtoolsPanel />,
-            },
-            TanStackQueryDevtools,
-          ]}
-        />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navigation />
+          <main className="pt-16">{children}</main>
+          <TanStackDevtools
+            config={{
+              position: 'bottom-right',
+            }}
+            plugins={[
+              {
+                name: 'Tanstack Router',
+                render: <TanStackRouterDevtoolsPanel />,
+              },
+              TanStackQueryDevtools,
+            ]}
+          />
+        </ThemeProvider>
         <Scripts />
       </body>
     </html>
