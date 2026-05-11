@@ -146,7 +146,7 @@ function Navigation() {
                 {link.name}
               </a>
             ))}
-            
+
             {/* Mobile Language Switcher & Theme Toggle */}
             <div className="pt-2 border-t border-[var(--line)] flex items-center gap-4">
               <LanguageSwitcher />

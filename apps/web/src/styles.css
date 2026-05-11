@@ -117,11 +117,11 @@
   --sidebar-ring: oklch(0.442 0.017 285.786);
 }
 
-@theme inline {
-  --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
+/* Sunset Theme */
+[data-theme="sunset"] {
+  --sea-ink: #8b3a3a;
+  --sea-ink-soft: #b85555;
+  --lagoon: #f97316;
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
@@ -337,9 +337,6 @@ a {
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
   body {
     background-color: var(--background);
     color: var(--foreground);

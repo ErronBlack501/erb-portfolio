@@ -1,6 +1,7 @@
 import { Github, Mail, Download, ArrowRight } from 'lucide-react'
 import { motion } from 'motion/react'
 import { m } from '#/paraglide/messages'
+import Particles from './Particles'
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -12,10 +13,19 @@ export function Hero() {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--lagoon)] opacity-10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[var(--palm)] opacity-10 rounded-full blur-3xl" />
+      {/* Particle animation */}
+      <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}>
+        <Particles
+          particleColors={["#328f97"]}
+          particleCount={300}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={false}
+          alphaParticles
+          disableRotation={false}
+          pixelRatio={1}
+        />
       </div>
 
       <div className="page-wrap relative z-10">
